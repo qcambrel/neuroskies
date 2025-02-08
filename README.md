@@ -30,6 +30,7 @@ Neuroskies is a project synthesizing concepts from scientific data visualization
 - NetCDF
 - AWS (S3, Lambda, Sagemaker)
 - Prometheus
+- Supabase
 - Github Actions
 - Docker
 - Docker Compose

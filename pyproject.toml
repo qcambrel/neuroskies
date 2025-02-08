@@ -19,6 +19,7 @@ fastapi = "0.115.8"
 netcdf4 = "1.7.2"
 boto3 = "1.36.15"
 prometheus_client = "0.21.1"
+supabase = "2.13.0"
 
 [build-system]
 requires = ["poetry-core"]

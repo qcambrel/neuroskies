@@ -17,5 +17,5 @@ jobs:
       - run: ruff check --fix
       - run: ruff format
       - run: echo "RUFF_VERSION=$(ruff --version)" >> $GITHUB_ENV
-      - run: echo "Ruff ${{ env.RUFF_VERSION }} is installed."
+      - run: echo "${{ env.RUFF_VERSION }} is installed."
       - run: echo "🍏 ${{ job.name }} is ${{ job.status }}."
