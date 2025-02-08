@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "neuroskies"
+version = "0.1.0"
+description = ""
+authors = ["Quincy Cambrel"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.12.8"
+torch = "2.5.1"
+scipy = "1.15.1"
+numba = "0.61.0"
+cartopy = "0.24.0"
+streamlit = "1.42.0"
+pandas = "2.2.3"
+opencv-python = "4.11.0"
+fastapi = "0.115.8"
+netcdf4 = "1.7.2"
+boto3 = "1.36.15"
+prometheus_client = "0.21.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
