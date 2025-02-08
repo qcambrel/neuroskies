@@ -1,0 +1,20 @@
+name: Neuroskies CI/CD
+run-name: ${{ github.actor }} is updating ${{ github.repository }} 🚀
+on: [push]
+jobs:
+  basic:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 Automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 Using a Github hosted ${{ runner.os }} server."
+      - run: echo "🔎 Pushing to ${{ github.ref }} in ${{ github.repository }}."
+      - uses: actions/checkout@v4
+      - run: echo "🍏 ${{ job.name }} is ${{ job.status }}."
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: astral-sh/ruff-action@v3
+      - run: ruff check --fix
+      - run: ruff format
+      - run: echo "ruff version $(ruff --version) is installed."
+      - run: echo "🍏 ${{ job.name }} is ${{ job.status }}."
