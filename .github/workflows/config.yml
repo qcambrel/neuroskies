@@ -16,5 +16,6 @@ jobs:
       - uses: astral-sh/ruff-action@v3
       - run: ruff check --fix
       - run: ruff format
-      - run: echo "ruff version $(ruff --version) is installed."
+      - run: echo "RUFF_VERSION=$(ruff --version)" >> $GITHUB_ENV
+      - run: echo "Ruff ${{ env.RUFF_VERSION }} is installed."
       - run: echo "🍏 ${{ job.name }} is ${{ job.status }}."
