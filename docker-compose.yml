@@ -1,1 +1,21 @@
 version: "3.9"
+services:
+  dashboard:
+    context: .
+    dockerfile: Dockerfile
+    ports: 8501:8501
+  metrics-lambda:
+    context: lambdas/metrics
+    dockerfile: Dockerfile
+    volumes:
+      - ~/.aws:/root/.aws
+  reducers-lambda:
+    context: lambdas/reducers
+    dockerfile: Dockerfile
+    volumes:
+      - ~/.aws:/root/.aws
+  tokens-lambda:
+    context: lambdas/tokens
+    dockerfile: Dockerfile
+    volumes:
+      - ~/.aws:/root/.aws
